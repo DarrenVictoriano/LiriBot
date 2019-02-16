@@ -1,4 +1,5 @@
 require("dotenv").config();
+const fs = require('fs');
 const axios = require("axios");
 const Spotify = require('node-spotify-api');
 const keys = require("./keys.js");
@@ -79,6 +80,14 @@ function Liri() {
             .catch(function (error) {
                 console.log(error);
             });
+    }
+
+    this.searchLiri = function (f) {
+        fs.readFile("random.txt", function (err, data) {
+            if (err) { throw err };
+            var newData = data.toString().split(",");
+            f(newData[0], newData[1]);
+        });
     }
 
 }
