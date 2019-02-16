@@ -2,18 +2,29 @@ require("dotenv").config();
 const axios = require("axios");
 const Spotify = require('node-spotify-api');
 const keys = require("./keys.js");
+var moment = require('moment');
 
 
 function Liri() {
+    var divider = "\n--------------------------------------\n\n";
 
     this.searchBand = function (search) {
         axios.get("https://rest.bandsintown.com/artists/" + search + "/events", {
             params: {
-                app_id: "codingbootcamp"
+                app_id: keys.code.band_key
             }
         })
             .then(function (response) {
-                console.log(response.data);
+                var data = response.data;
+
+                for (i in data) {
+                    var date = moment(data[i].datetime).format("MMM DD, YYYY");
+                    console.log("What: " + data[i].venue.name)
+                    console.log("Where: " + data[i].venue.city + ", " + data[i].venue.country);
+                    console.log("When: " + date);
+                    console.log(divider);
+                }
+
             })
             .catch(function (error) {
                 console.log(error);
@@ -38,10 +49,36 @@ function Liri() {
                 console.log("Track: " + track.name);
                 console.log("Spotify song link: " + track.external_urls.spotify);
                 console.log("Album: " + track.album.name);
-                console.log("\n--------------------------------------\n\n");
+                console.log(divider);
             }
 
         });
+    }
+
+    this.searchMovie = function (search) {
+        axios.get("http://www.omdbapi.com/", {
+            params: {
+                apikey: keys.code.omdb_key,
+                t: search
+            }
+        })
+            .then(function (response) {
+                var data = response.data;
+
+                console.log("Title: " + data.Title);
+                console.log("Year: " + data.Year);
+                console.log("IMDB Ratings: " + data.Ratings[0].Value);
+                console.log("Rotten Tomatoes: " + data.Ratings[1].Value);
+                console.log("Country: " + data.Country);
+                console.log("Language: " + data.Language);
+                console.log("Plot: " + data.Plot);
+                console.log("Actors: " + data.Actors);
+                console.log(divider);
+
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
     }
 
 }

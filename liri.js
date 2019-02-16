@@ -22,4 +22,10 @@ if (term === "concert-this") {
         search = "The Sign";
     }
     liriBot.searchSpotify(search);
+} else if (term === "movie-this") {
+    console.log("Searching Movie..\n\n");
+    if (!search) {
+        search = "Mr. Nobody";
+    }
+    liriBot.searchMovie(search);
 }
