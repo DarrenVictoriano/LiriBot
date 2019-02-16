@@ -1,0 +1,29 @@
+{
+  "name": "liribot",
+  "version": "1.0.0",
+  "description": "a simple command line tool using spotify api.",
+  "main": "liri.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarrenVictoriano/LiriBot.git"
+  },
+  "keywords": [
+    "spotify"
+  ],
+  "author": "Darren Victoriano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarrenVictoriano/LiriBot/issues"
+  },
+  "homepage": "https://github.com/DarrenVictoriano/LiriBot#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bandsintown": "^1.0.1",
+    "dotenv": "^6.2.0",
+    "moment": "^2.24.0",
+    "node-spotify-api": "^1.0.7"
+  }
+}
