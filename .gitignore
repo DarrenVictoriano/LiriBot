@@ -1,5 +1,6 @@
 Instructions.md
 /node_modules
+/assets
 .DS_Store
 .env
 test.json
