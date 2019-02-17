@@ -27,7 +27,7 @@ A simple command line tool made of NodeJS using Spofity API. Introduction to Nod
 
      * Date of the Event (use moment to format this as "MM/DD/YYYY")
 
-    ![concert-this](https://i.imgur.com/gFtSebz.gif)
+    ![concert-this](https://i.imgur.com/ujvsWdZ.gif)
 
 2. `node liri.js spotify-this-song '<song name here>'`
 
@@ -43,7 +43,7 @@ A simple command line tool made of NodeJS using Spofity API. Introduction to Nod
 
    * If no song is provided then your program will default to "The Sign" by Ace of Base.
 
-    ![spotify-this](https://i.imgur.com/7pDg4aw.gif)
+    ![spotify-this](https://i.imgur.com/9qYLu5K.gif)
 
 3. `node liri.js movie-this '<movie name here>'`
 
@@ -62,7 +62,7 @@ A simple command line tool made of NodeJS using Spofity API. Introduction to Nod
 
    * If the user doesn't type a movie in, the program will output data for the movie 'Mr. Nobody.'
 
-    ![movie-this](https://i.imgur.com/a1BQRoP.gif)
+    ![movie-this](https://i.imgur.com/V14cB9v.gif)
 
 4. `node liri.js do-what-it-says`
 
@@ -70,4 +70,4 @@ A simple command line tool made of NodeJS using Spofity API. Introduction to Nod
 
      * It should run `spotify-this-song` for "I Want it That Way," as follows the text in `random.txt`.
 
-    ![do-what](https://i.imgur.com/Z9JC0kj.gif)
+    ![do-what](https://i.imgur.com/NUvYVuz.gif)
