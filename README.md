@@ -27,7 +27,7 @@ A simple command line tool made of NodeJS using Spofity API. Introduction to Nod
 
      * Date of the Event (use moment to format this as "MM/DD/YYYY")
 
-    ![concert-this](https://i.imgur.com/LgxrsgN.gif)
+    ![concert-this](https://i.imgur.com/gFtSebz.gif)
 
 2. `node liri.js spotify-this-song '<song name here>'`
 
